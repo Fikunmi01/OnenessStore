@@ -14,6 +14,6 @@ export class FooterComponent implements OnInit {
   date = new Date();
   year = this.date.getFullYear();
   logYear(): void {
-    console.log(this.year, );
+    console.log(this.year, 'yearrr');
   }
 }

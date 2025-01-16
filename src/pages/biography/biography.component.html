@@ -1,0 +1,237 @@
+<div>
+  <app-navbar></app-navbar>
+  <div
+    class="flex flex-col items-start justify-between p-10 bg-[url('/assets/background.jpg')]"
+  >
+    <div class="flex justify-between w-full">
+      <div class="flex flex-col gap-y-4 bg-">
+        <div
+          class="px-4 pt-4 pb-4 bg-[#3d0101] text-[#cfb53b] border-[#810100] border border-dotted"
+        >
+          <img src="/assets/upper-left1 (1).jpg" alt="" />
+          <div class="flex justify-center items-center mt-3">
+            <p class="font-serif font-bold">EAST/WEST</p>
+          </div>
+
+          <div class="gap-y-1.5 flex-col flex">
+            <p class="text-2xl text-white">
+              <span class="text-3xl">S</span>HAWN
+              <span class="text-3xl">R</span>AE
+            </p>
+
+            <p class="text-white text-base">"AMBASSADOR FOR A BETTER WORLD"</p>
+            <p>An Article Written by Nori Rao</p>
+          </div>
+        </div>
+      </div>
+      <div class="font-serif text-white text-lg">
+        <div class="flex relative mb-4 justify-between">
+          <span></span>
+          <div
+            class="px-2 pt-2 w-fit mb-2 bg-[#3d0101] text-[#cfb53b] border-[#810100] border border-dotted"
+          >
+            <img src="/assets/upper-right1.jpg" alt="" />
+            <p class="text-base text-white">Nori Rao</p>
+          </div>
+        </div>
+
+        <div
+          class="w-96 top-96 py-4 h-fit text-sm text-white z-20 -right-[79px]"
+        >
+          <h2
+            (click)="toggleTab('earlyLife')"
+            [ngClass]="{
+              'text-[#cfb53b] text-opacity-60': activeTab === 'earlyLife'
+            }"
+            class="border-b border-opacity-30 border-white p-1.5 hover:text-[#cfb53b] cursor-pointer"
+          >
+            Early Life and Background
+          </h2>
+          <h2
+            (click)="toggleTab('education')"
+            [ngClass]="{
+              'text-[#cfb53b] text-opacity-60': activeTab === 'education'
+            }"
+            class="border-b border-opacity-30 border-white p-1.5 hover:text-[#cfb53b] cursor-pointer"
+          >
+            Education
+          </h2>
+          <h2
+            (click)="toggleTab('career')"
+            [ngClass]="{
+              'text-[#cfb53b] text-opacity-60': activeTab === 'career'
+            }"
+            class="border-b border-opacity-30 border-white p-1.5 hover:text-[#cfb53b] cursor-pointer"
+          >
+            Career Journey
+          </h2>
+          <h2
+            (click)="toggleTab('accomplishment')"
+            [ngClass]="{
+              'text-[#cfb53b] text-opacity-60': activeTab === 'accomplishment'
+            }"
+            class="border-b border-opacity-30 border-white p-1.5 hover:text-[#cfb53b] cursor-pointer"
+          >
+            Accomplishment and Recognition
+          </h2>
+          <h2
+            (click)="toggleTab('personal')"
+            [ngClass]="{
+              'text-[#cfb53b] text-opacity-60': activeTab === 'personal'
+            }"
+            class="border-b border-opacity-30 border-white p-1.5 hover:text-[#cfb53b] cursor-pointer"
+          >
+            Personal Life
+          </h2>
+        </div>
+      </div>
+    </div>
+    <div class="w-2/3 text-white">
+      <p *ngIf="activeTab === 'earlyLife'">
+        Nicknamed Bambi at birth by his relatives and tribe, Shaanshehryar Khan
+        Rae Zagajadoon, was raised until the age of 18 in the foothills of the
+        Himalayan Mountains. Historical figures such as Marco Polo, Alexander
+        the Great, and Genghis Khan, among others, once visited his homeland.
+        Noteworthy here is the fact that Shawn inherited from both of his
+        parents a remarkable lineage of Christian, Hindu, Sikh, Muslim, Jewish,
+        Buddhist, Tibetan, and Chinese ancestry. It was due in large part to his
+        having this multifarious background that Shawn was instilled with a
+        fierce desire to erase international differences and to impact the ways
+        in which human beings care for one another. His heartfelt desire for
+        helping those in need stems from the time he witnessed, in a refugee
+        camp at the age of six, the horrors of homelessness, hunger, disease,
+        and despair. These tragic scenes, etched in his mind, moved him to join
+        with others to alleviate such misery among the suffering peoples of the
+        world.
+      </p>
+
+      <p *ngIf="activeTab === 'education'">
+        At the age of seventeen, the United States government invited Shawn from
+        the Far East to study as an exchange student in the United States. He
+        was then sent to Europe and Asia to act as an Ambassador for American
+        Education. A year later, on his own, Shawn traveled back to the U.S.,
+        desiring to further his American studies. With this goal in mind, the
+        first of four degrees that he received was a Bachelor of Science Degree
+        in Public Administration with an emphasis in Political Science and
+        Economics. His academic qualifications also include three law degrees.
+        He has earned a 1) LL.B. Degree (Juris Doctor equivalent) in
+        International Law, 2) an LL.M Degree in U.S. Laws, and 3) a second LL.M.
+        Degree in Human Rights Laws (Intercultural) for the purpose of serving
+        those suffering from human rights, access to justice, and human slavery
+        abuses in the developing world.
+      </p>
+
+      <p *ngIf="activeTab === 'career'">
+        As a recording artist Shawn has just completed a new CD of love songs
+        entitled A World of Romance, A Time to Fall in Love, as well as a duet
+        with, Deana Martin, daughter of American musical icon Dean Martin, for
+        his American debut of his Christmas Album, A World Christmas, Love Knows
+        No Borders. As a designer, he has a line of products that include both a
+        Jewelry Collection and a Perfume Collection known as ONENESS,
+        characterized by a philosophy that “exhorts individuals to challenge
+        themselves to reach beyond the boundaries of one’s self, and to awaken
+        to the spirit of oneness inherent in humankind.” In all of these
+        products and other endeavors, Shawn is committed to share in royalties
+        and to dedicate his time and effort in promoting and supporting causes
+        that are in the service of alleviating homelessness, hunger, disease,
+        and despair. Nori Rao is a Producer, former Editor-in Chief of Miracle
+        Journeys Magazine, Radio Talk Show Host, Lecturer, and frequent guest on
+        Radio and Television. She has traveled throughout the world as a
+        Performing Artist, and for several years her choreographed
+        “Contemplative Dance” was an integral part of internationally acclaimed
+        recording artist and composer, Steven Halpern. As a Producer of Expos
+        and Mega-Conventions her list of participants included revolutionary
+        thinkers such as Timothy Leary, “Many Lives, Many Masters” best-selling
+        author Dr. Brian Weiss, “Life After Death” best-selling author Raymond
+        Moody, Ken Keyes, Jr. author of the best-selling “The Hundredth Monkey”,
+        and many other well known and world famous personalities.
+      </p>
+
+      <p *ngIf="activeTab === 'accomplishment'">
+        As a unique and multifaceted personality, and a true nexus of the East
+        and West, Shawn Rae is a natural-born global thinker who possesses a
+        well-rounded and interestingly refreshing personal appeal. As an
+        individual he has accomplished much, and is noted internationally for
+        his varied contributions as a speaker, a designer, a recording artist,
+        and a humanitarian. Shawn has, during the course of his global work,
+        met, interviewed, consulted or worked with a host of distinguished
+        personalities from A to Z–– from Wally Amos (“Famous Amos”) to Arianna
+        Huffington to Fareed Zakaria, and many others in between. Shawn has
+        represented the United States at various national and international
+        events, and has also been featured in the media speaking on topics such
+        as corporate giving, human rights abuses, matters relating to world
+        trade, technology, and energy-related issues affecting humankind. He was
+        selected as one of the Top Ten Speakers in the United States for the
+        Conference on American Ingenuity by the U.S. Department of Commerce and
+        picked as one of four Judges by the U.S. Patent & Trademark Office and
+        the Intellectual Property Association (IPO). The IPO is comprised of
+        such prestigious members as, General Motors, Lockheed, 3M, General
+        Electric, Microsoft, Xerox, Aramco, Rolls-Royce, and other major
+        corporate and multinational leaders. Shawn is the former global
+        “Goodwill Ambassador” for the World Energy Forum headquartered at the
+        United Nations Plaza. His World Energy Forum duties included keeping an
+        eye on global conversations on energy issues and educational campaigns
+        for accessible and sustainable energy for benefitting the economic and
+        social development of nations and peoples across the globe. As a
+        recording artist Shawn has just completed a new CD of love songs
+        entitled A World of Romance, A Time to Fall in Love, as well as a duet
+        with, Deana Martin, daughter of American musical icon Dean Martin, for
+        his American debut of his Christmas Album, A World Christmas, Love Knows
+        No Borders. As a designer, he has a line of products that include both a
+        Jewelry Collection and a Perfume Collection known as ONENESS,
+        characterized by a philosophy that “exhorts individuals to challenge
+        themselves to reach beyond the boundaries of one’s self, and to awaken
+        to the spirit of oneness inherent in humankind.” In all of these
+        products and other endeavors, Shawn is committed to share in royalties
+        and to dedicate his time and effort in promoting and supporting causes
+        that are in the service of alleviating homelessness, hunger, disease,
+        and despair.
+      </p>
+
+      <p *ngIf="activeTab === 'personal'">
+        Shawn’s motto is, “Challenge yourself…” He feels that anyone can achieve
+        anything if one challenges oneself enough. According to Shawn, “A
+        unified humanity can collectively resolve problems… Divided, we only
+        serve to create them.” Further, Shawn sees, “The challenge is
+        individually and collectively to awaken our true potential for goodness
+        and greatness, and to realize that positive change begins with us.” “A
+        student of life”, is how Shawn best likes to describe himself. Blessed
+        with a rich ancestry and a vast cultural background, he has gleaned both
+        knowledge and experience from living in the far corners of the East, to
+        the land, which he now lives and loves in the West. Shawn believes that
+        both these influences together helped to shape and sharpen him in his
+        goal and mission to work for the benefit of the less fortunate, as it
+        continues to serve him as an invaluable walking stick on his “continuing
+        journey towards self-illumination and enlightenment.”
+      </p>
+    </div>
+    <div
+      class="relative z-40 mt-8 justify-center items-center text-center w-2/3 mx-auto flex flex-col text-white"
+    >
+      <h2 class="font-serif font-bold text-3xl">
+        A PERSONAL NOTE OF THANKS FROM ... FROM SHAWN
+      </h2>
+      <p class="font-sans italic">
+        As a student of life, my understanding to date is derived from a
+        compilation of writings, conversations and observations learned from
+        many cultures, traditions, religions, and from both Eastern and Western
+        philosophies - all have been intertwined to form an invaluable walking
+        stick on this continuing journey towards self-illumination and
+        enlightenment. In this process of my personal growth, I have come to not
+        only recognize, but to honor the wisdom that has come from so many
+        wonderful, sometimes surprising, and often times rather unexpected
+        sources. It has been my privilege to learn and grow from a myriad of
+        individuals, whose individual and collective contributions bestowed upon
+        me such favors as love, understanding, guidance, acceptance, respect,
+        belief, and faith. To all of you - parents, family, relatives,
+        associates, friends, and to friends I’ve not yet met - I say, “Thank
+        You!” For it is in this simple statement that I can truly express the
+        feelings with which my heart overflows …Thank You for being!
+      </p>
+      <p class="font-sans font-semibold pt-2">With Love,</p>
+      <p class="font-sans font-semibold">Shawn</p>
+    </div>
+  </div>
+
+  <app-footer />
+</div>
