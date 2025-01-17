@@ -1,0 +1,43 @@
+<div>
+  <app-navbar />
+
+  <div class="bg-[url('/assets/bg2.jpg')] text-white px-5 py-10">
+    <h1 class="font-serif text-2xl">PHOTOS:</h1>
+    <p class="font-serif pt-2">
+      The final frontier may be human relationships, one person to another.
+    </p>
+    <p class="mb-2">
+      -Buzz Aldrin (<span class="text-[#e70000] italic"
+        >Astronaut and 2nd human to walk on the Moon</span
+      >)
+    </p>
+
+    <p class="font-serif text-lg">
+      CLICK ON PHOTO IMAGES TO VIEW LARGER PICTURES AND DESCRIPTION
+    </p>
+
+    <div class="my-2 grid grid-cols-3 gap-4">
+      <div
+        class="px-4 pt-4 pb-4 bg-[#3d0101] text-[#cfb53b] border-[#810100] border border-dotted"
+        *ngFor="let item of visiblePhotosArray"
+      >
+        <span>
+          <img src="{{ item.img }}" class="w-96 h-96" alt="" />
+          <p>
+            {{ item.description }}
+          </p>
+        </span>
+      </div>
+    </div>
+    <p
+      class="text-center cursor-pointer text-[#cfb53b] font-serif"
+      [ngStyle]="{ opacity: currentIndex >= photosArray.length ? 0.5 : 1 }"
+      (click)="loadMore()"
+    >
+      View More
+      <!-- </div> -->
+    </p>
+  </div>
+
+  <app-footer />
+</div>

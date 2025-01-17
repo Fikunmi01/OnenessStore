@@ -83,6 +83,11 @@
 30px 5rem -->
 
 <div class="bg-[#3d0101]">
+  <style>
+    .active-link {
+      color: white;
+    }
+  </style>
   <span
     class="flex font-sans text-[#fff8d3] border-[#810100] border justify-between border-dotted"
   >
@@ -115,10 +120,10 @@
     <ul
       class="inline-flex text-[#e70000] gap-x-4 px-1.5 text-sm py-1 text-[12.8px] font-bold"
     >
-      <li class="active text-[#fff] cursor-pointer w-fit">HOME</li>
-      <li class="hover:text-white cursor-pointer" routerLink="/biography">BIOGRAPHY</li>
-      <li class="hover:text-white cursor-pointer">PHOTO</li>
-      <li class="hover:text-white cursor-pointer">MUSIC</li>
+      <li class="cursor-pointer w-fit" routerLink="/" [ngClass]="{ 'active-link': isActive('/') }">HOME</li>
+      <li class="hover:text-white cursor-pointer" routerLink="/biography" [ngClass]="{ 'active-link': isActive('/biography') }">BIOGRAPHY</li>
+      <li class="hover:text-white cursor-pointer" routerLink="/photos" [ngClass]="{ 'active-link': isActive('/photos') }">PHOTO</li>
+      <li class="hover:text-white cursor-pointer" routerLink="/music" [ngClass]="{ 'active-link': isActive('/music') }">MUSIC</li>
       <li>
         <a
           href="https://onenesstemporarystore.myshopify.com/"
@@ -127,9 +132,9 @@
           PERFUMES
         </a>
       </li>
-      <li class="hover:text-white cursor-pointer">GIFT SHOP</li>
-      <li class="hover:text-white cursor-pointer">CONTACT</li>
-      <li class="hover:text-white cursor-pointer">VIEW CART</li>
+      <li class="hover:text-white cursor-pointer" routerLink="/gift-shop" [ngClass]="{ 'active-link': isActive('/gift-shop') }">GIFT SHOP</li>
+      <li class="hover:text-white cursor-pointer" routerLink="/contact" [ngClass]="{ 'active-link': isActive('/contact') }">CONTACT</li>
+      <li class="hover:text-white cursor-pointer" routerLink="/view-cart" [ngClass]="{ 'active-link': isActive('/view-cart') }">VIEW CART</li>
     </ul>
   </span>
 </div>
