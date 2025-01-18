@@ -1,0 +1,97 @@
+<div>
+  <!-- <app-navbar></app-navbar> -->
+
+  <div>
+    <!-- Music preview content goes here -->
+    <div class="max-w-4xl mx-auto font-serif text-white">
+      <!-- Artist Header -->
+      <div class="mb-8">
+        <h1 class="text-4xl font-bold mb-2">{{ artist.name }}</h1>
+        <div class="flex items-center space-x-2">
+          <i class="fas fa-volume-up"></i>
+          <span class="text-sm">Preview available</span>
+        </div>
+      </div>
+
+      <!-- Albums Grid -->
+      <div class="space-y-8">
+        <div
+          *ngFor="let album of artist.albums"
+          class="bg-white bg-opacity-40 trounded-lg shadow-lg p-6"
+        >
+          <div class="flex flex-col md:flex-row gap-6">
+            <!-- Album Cover -->
+            <div class="flex-shrink-0">
+              <img
+                [src]="album.coverUrl"
+                [alt]="album.title + ' cover'"
+                class="w-48 h-48 object-cover rounded-lg shadow-lg"
+              />
+            </div>
+
+            <!-- Album Details -->
+            <div class="flex-grow">
+              <h2 class="text-2xl font-bold mb-2">{{ album.title }}</h2>
+              <p class="text-sm mb-4">{{ album.year }}</p>
+
+              <!-- Tracks List -->
+              <div class="space-y-2 h-60 no-scrollbar overflow-y-scroll">
+                <div
+                  *ngFor="let track of album.tracks"
+                  class="flex items-center p-2 hover:bg-gray-100 hover:text-black rounded-lg cursor-pointer"
+                  (click)="togglePlay(track)"
+                >
+                  <button
+                    class="p-2 rounded-full hover:bg-gray-200 hover:text-black"
+                  >
+                    <i
+                      class="fas"
+                      [ngClass]="{
+                        'fa-play': !(
+                          currentlyPlaying?.id === track.id && isPlaying
+                        ),
+                        'fa-pause':
+                          currentlyPlaying?.id === track.id && isPlaying
+                      }"
+                    ></i>
+                  </button>
+                  <div class="ml-3 flex-grow">
+                    <div class="font-medium">{{ track.title }}</div>
+                    <div
+                      class="text-sm text-white hover:text-black duration-text"
+                    >
+                      {{ track.duration }}
+                    </div>
+                  </div>
+                  <div
+                    *ngIf="currentlyPlaying?.id === track.id"
+                    class="w-24 bg-gray-200 rounded-full h-1"
+                  >
+                    <div
+                      class="bg-blue-600 h-1 rounded-full"
+                      [style.width.%]="playbackProgress"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <p>You are not able to hear the song click <a href="">here</a> for free download.</p>
+  </div>
+</div>
+
+<style>
+  .duration-text {
+    transition: color 0.3s;
+  }
+  .flex.items-center:hover .duration-text {
+    color: black;
+  }
+</style>

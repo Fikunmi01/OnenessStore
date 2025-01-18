@@ -1,1 +1,23 @@
-<p>music works!</p>
+<div>
+  <app-navbar />
+
+  <div class="bg-[#000]">
+    <div
+      class="flex py-8 justify-center flex-col w-2/3 mx-auto text-center justify-items-center font-serif text-white"
+    >
+      <h1 class="text-3xl">LISTENING STATION</h1>
+      <p class="text-2xl mb-2">PLEASE SCROLL DOWN TO SONG CLIPS</p>
+      <img src="/assets/allcds.jpg" alt="" />
+
+      <div class="grid grid-cols-2 mx-auto my-3 gap-x-3">
+        <img src="/assets/cdGrid2.jpg" class="h-60 w-60" alt="" />
+
+        <img src="/assets/cdGrid.jpg" class="h-60 w-60" alt="" />
+      </div>
+    </div>
+
+    <app-music-preview />
+    Music works
+  </div>
+  <app-footer />
+</div>
