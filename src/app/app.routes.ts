@@ -4,6 +4,7 @@ import { FooterComponent } from '../components/footer/footer.component';
 import { BiographyComponent } from '../pages/biography/biography.component';
 import { PhotosComponent } from '../pages/photos/photos.component';
 import { MusicComponent } from '../pages/music/music.component';
+import { GiftShopComponent } from '../pages/gift-shop/gift-shop.component';
 
 export const routes: Routes = [
   {
@@ -21,5 +22,8 @@ export const routes: Routes = [
   {
     path: 'music',
     component: MusicComponent,
+  },
+  {path:'gift-shop',
+    component:GiftShopComponent,
   },
 ];

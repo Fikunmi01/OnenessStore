@@ -1,0 +1,110 @@
+<div>
+  <app-navbar />
+  <div class="px-10 font-serif bg-[#000] py-10">
+    <ul class="tabs flex gap-x-4">
+      <li
+        (click)="selectTab('jewelries')"
+        class="cursor-pointer bg-[#cfb53b] text-white rounded-full px-3 py-1"
+        [ngClass]="{ 'bg-opacity-45': selectedTab === 'jewelries' }"
+      >
+        PERFUMES
+      </li>
+      <li
+        (click)="selectTab('cd')"
+        class="cursor-pointer bg-[#cfb53b] text-white rounded-full px-3 py-1"
+        [ngClass]="{ 'bg-opacity-45': selectedTab === 'cd' }"
+      >
+        CDs
+      </li>
+    </ul>
+    <div *ngIf="selectedTab === 'jewelries'" class="pt-5">
+      <h1 class="text-white text-2xl">PERFUME</h1>
+
+      <div class="mt-4">
+        <div class="flex items-center gap-x-10">
+          <div
+            class="text-white w-1/2 px-3 py-2 border border-[#810100] bg-[#3d0101] border-dotted"
+          >
+            <img src="/assets/onenessPerf1.jpg" alt="" />
+          </div>
+
+          <div class="w-1/2">
+            <p class="text-white">
+              ONENESS SPORT CHALLENGES US TO ALWAYS BE ONE WITH OUR HIGHEST
+              ASPIRATIONS. ONENESS SPORT REMINDS US THAT SPORTMANSHIP IS NOBLE,
+              STIRRING US TOWARDS HONOR, INTEGRITY AND GRACIOUSNESS. ONENESS
+              SPORT APPEALS TO THOSE WHO PURSUE A PEACEFUL AND LOVING
+              CO-EXISTENCE… A WINNER’S GAME FOR ALL. ONENESS SPORT STIMULATES US
+              TO CHOOSE NOBLE ACTIONS IN OUR EVERYDAY THOUGHTS, WORDS AND DEEDS.
+              ONENESS SPORT LET THE BEAUTY OF THIS ESSENCE AND ITS MESSAGE
+              INSPIRE PEACEFUL CO-EXISTENCE ON AND OFF THE FIELD; MAY IT
+              ENCIRCLE ALL NATIONS AND ALL PEOPLES WITH THE LOVING GIFT OF
+              GRATITUDE TO ENCOURAGE CO-CREATION AND RENEWAL OF OUR SACRED
+              PLANETARY HOME-KNOWING IN SPIRIT – WE ARE ALL ONE. In ONENESS
+              Shawn Rae
+            </p>
+          </div>
+        </div>
+        <!-- <div class="flex justify-between my-5 ">
+          <div
+            class="text-white w-96 px-3 py-2 border border-[#810100] bg-[#3d0101] border-dotted mx-auto flex gap-y-4 flex-col"
+          >
+            <img
+              src="/assets/jewelryImg1.jpg"
+              class="border border-[#810100] border-dotted"
+              alt=""
+            />
+            <p class="text-pop text-center text-sm">
+              The Oneness Jewelry Collection designs are made up of unique and
+              elegant fine jewelry pieces, from the most simple and stately to
+              the more extravagant. These artistic representations, each making
+              their own timeless statement, are manufactured by the finest
+              craftsmen in the world.
+            </p>
+          </div>
+
+          <div class=" px-3 py-2 border border-[#810100] bg-[#3d0101] border-dotted">
+            <img src="/assets/jewelryCollection.jpg" alt="" />
+          </div>
+        </div> -->\
+
+        <!-- <div
+          *ngFor="let item of jewelryItems"
+          class="bg-white rounded-lg shadow overflow-hidden"
+        >
+          <img
+            [src]="item.image"
+            [alt]="item.name"
+            class="w-full h-48 object-fit"
+          />
+          <div class="p-4">
+            <h3 class="font-medium text-gray-800">{{ item.name }}</h3>
+            <p class="text-blue-600 font-bold mt-2">${{ item.price }}</p>
+          </div>
+        </div> -->
+      </div>
+    </div>
+    <div *ngIf="selectedTab === 'cd'" class="pt-5">
+      <h1 class="text-white text-2xl">PERFUME</h1>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div
+          *ngFor="let cd of cds"
+          class="bg-white rounded-lg shadow overflow-hidden"
+        >
+          <img
+            [src]="cd.image"
+            [alt]="cd.title"
+            class="w-full h-48 object-contain"
+          />
+          <div class="p-4">
+            <h3 class="font-medium text-gray-800">{{ cd.title }}</h3>
+            <p class="text-gray-600 text-sm">{{ cd.artist }}</p>
+            <p class="text-blue-600 font-bold mt-2">${{ cd.price }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <app-footer />
+</div>
