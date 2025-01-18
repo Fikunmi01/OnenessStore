@@ -59,6 +59,10 @@ export class GiftShopComponent {
     this.selectedTab = tab;
   }
 
+  addToCart() {
+    window.location.href = 'https://www.paypal.com/cgi-bin/webscr?cmd=_cart&business=paypal@shawnrae.com&display=1';
+  }
+
   cds: CD[] = [
     {
       id: 1,

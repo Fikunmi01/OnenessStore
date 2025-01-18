@@ -3,7 +3,7 @@
 
   <div>
     <!-- Music preview content goes here -->
-    <div class="max-w-4xl mx-auto font-serif text-white">
+    <div class="max-w-4xl py-3 px-3 mx-auto font-serif text-white">
       <!-- Artist Header -->
       <div class="mb-8">
         <h1 class="text-4xl font-bold mb-2">{{ artist.name }}</h1>
@@ -17,7 +17,7 @@
       <div class="space-y-8">
         <div
           *ngFor="let album of artist.albums"
-          class="bg-white bg-opacity-40 trounded-lg shadow-lg p-6"
+          class="bg-white bg-opacity-40 trounded-lg shadow-lg p-3 md:p-6"
         >
           <div class="flex flex-col md:flex-row gap-6">
             <!-- Album Cover -->
