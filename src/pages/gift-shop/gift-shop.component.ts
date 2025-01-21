@@ -1,9 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { NavbarComponent } from '../../components/navbar/navbar.component';
 import { FooterComponent } from '../../components/footer/footer.component';
 import { JewelriesComponent } from '../../components/jewelries/jewelries.component';
 import { CDComponent } from '../../components/cd/cd.component';
 import { CommonModule } from '@angular/common';
+import { CurrencyConverterComponent } from '../../components/currency-converter/currency-converter.component';
+import { CurrencyService } from '../../app/services/currency-service.service';
 
 interface JewelryItem {
   id: number;
@@ -29,11 +31,12 @@ interface CD {
     JewelriesComponent,
     CommonModule,
     CDComponent,
+    CurrencyConverterComponent,
   ],
   templateUrl: './gift-shop.component.html',
   styleUrls: ['./gift-shop.component.scss'],
 })
-export class GiftShopComponent {
+export class GiftShopComponent implements OnInit {
   selectedTab: string = 'jewelries';
   jewelryItems: JewelryItem[] = [
     {
@@ -55,12 +58,21 @@ export class GiftShopComponent {
       image: '/api/placeholder/400/300',
     },
   ];
+  baseCurrency: string = 'USD';
+
+  constructor(private currencyService: CurrencyService) {}
+
+  ngOnInit(): void {
+    // Initialize any required data here
+  }
+
   selectTab(tab: string) {
     this.selectedTab = tab;
   }
 
   addToCart() {
-    window.location.href = 'https://www.paypal.com/cgi-bin/webscr?cmd=_cart&business=paypal@shawnrae.com&display=1';
+    window.location.href =
+      'https://www.paypal.com/cgi-bin/webscr?cmd=_cart&business=paypal@shawnrae.com&display=1';
   }
 
   cds: CD[] = [

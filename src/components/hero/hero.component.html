@@ -185,8 +185,7 @@
 
       <span class="border-[#cc6633] border rounded-xl">
         <iframe
-          class="md:h-96 rounded-xl"
-          width="md:560"
+          class="w-80 md:w-[560px] md:h-96 rounded-xl"
           src="https://www.youtube.com/embed/HXI5r-x7FL0?si=Mvc0c7s-7IsZ7OvE"
           title="YouTube video player"
           frameborder="0"
@@ -208,70 +207,118 @@
         >
           <div
             class="flex overflow-x-scroll gap-x-4 border-r md:px-6 md:w-3/5 no-scrollbar"
+            id="slideshow"
           >
-            <div class="flex-shrink-0 md:w-80">
+            <div
+              class="flex-shrink-0 md:w-80 active-item"
+              *ngFor="let item of slides"
+            >
               <div
                 class="flex font-serif text-sm md:text-base bg-white justify-center items-center flex-col-reverse py-5 border-2 rounded-lg"
               >
-                <p class="px-4">The World of Perfume & Fragrances by Shawn Rae</p>
+                <p class="px-4">
+                  {{ item.text }}
+                </p>
                 <img
-                  src="/assets/upper-center3.jpg"
+                  src="{{ item.img }}"
                   class="w-32 h-40 object-cover"
                   alt=""
                 />
               </div>
             </div>
-            <div class="flex-shrink-0 md:w-80">
-              <div
-                class="flex font-serif text-sm break-words  md:text-base bg-white justify-center items-center flex-col-reverse py-5 border-2 rounded-lg"
-              >
-                <p class="px-4">Christmas & Roman CDs Available on Amazon & Itunes</p>
-                <img
-                  src="/assets/upper-center1.jpg"
-                  class="w-32 h-40 object-cover"
-                  alt=""
-                />
-              </div>
-            </div>
-            <div class="flex-shrink-0 md:w-80">
-              <div
-                class="flex font-serif text-sm md:text-base bg-white justify-center items-center flex-col-reverse py-5 border-2 rounded-lg"
-              >
-                <p class="px-4">Christmas & Roman CDs Available on Amazon & Itunes</p>
-                <img
-                  src="/assets/upper-center2.jpg"
-                  class="w-32 h-40 object-cover"
-                  alt=""
-                />
-              </div>
-            </div>
+      
           </div>
+          <!-- <div class="flex justify-center mt-4">
+            <button
+              id="prevSlide"
+              class="mx-2 px-4 py-2 bg-blue-500 text-white rounded"
+            >
+              Previous
+            </button>
+            <button
+              id="nextSlide"
+              class="mx-2 px-4 py-2 bg-blue-500 text-white rounded"
+            >
+              Next
+            </button>
+          </div> -->
 
-          <div class="text-white flex mb-4 md:mb-0 md:px-10 flex-col items-start">
+          <div
+            class="text-white flex mb-4 md:mb-0 md:px-10 flex-col items-start"
+          >
             <h3 class="text-[#ffd700] font-sans text-[32px]">
               Shawn Rae Video Clips
             </h3>
+            <ol
+              class="list-decimal flex flex-col items-start px-1 text-[#b8e0f5]"
+            >
+              <li class="font-pop text-base text-[#b8e0f5] cursor-pointer">
+                <a
+                  class="border-b hover:border-[#fff] border-[#e70000]"
+                  target="_blank"
+                  href="https://www.shawnrae.com/news.shtml"
+                >
+                  Latest News & Events Page
+                </a>
+              </li>
+              <li
+                class="font-pop text-sm cursor-pointer border-[#e70000] hover:border-white"
+              >
+                <a
+                  class="border-b hover:border-[#fff] text-[#e70000] hover:text-white border-[#e70000]"
+                  target="_blank"
+                  href="https://www.shawnrae.com/page82.shtml"
+                >
+                  Shawn Rae Video Biography
+                </a>
+              </li>
+              <li class="font-pop text-sm text-[#b8e0f5] cursor-pointer">
+                <a
+                  target="_blank"
+                  href="https://www.shawnrae.com/news.shtml"
+                  class="border-b hover:border-[#fff] text-[#40ef61] border-[#e70000]"
+                >
+                  Photos From Arianna Huffington to Fareed Zakaria
+                </a>
+              </li>
 
-            <li class="font-pop text-base cursor-pointer">
-              Latest News & Events Page
-            </li>
-            <li class="font-pop text-sm cursor-pointer">
-              Shawn Rae Video Biography
-            </li>
-            <li class="font-pop text-sm cursor-pointer">
-              Photos From Arianna Huffington to Fareed Zakaria
-            </li>
-
-            <li class="font-pop text-sm cursor-pointer">
-              Shawn Rae Christmas Album Videos
-            </li>
-            <li class="font-pop text-sm cursor-pointer">
-              Shawn Rae Music Videos
-            </li>
-            <li class="font-pop text-sm cursor-pointer">
-              Shawn Rae National & Internation
-            </li>
-            <li class="font-pop text-sm cursor-pointer">More Video Clips</li>
+              <li class="font-pop text-[#b8e0f5] text-sm cursor-pointer">
+                <a
+                  target="_blank"
+                  href="https://www.shawnrae.com/page78.shtml"
+                  class="border-b hover:border-[#fff] text-[#e70000] border-[#e70000]"
+                >
+                  Shawn Rae Christmas Album Videos
+                </a>
+              </li>
+              <li class="font-pop text-sm cursor-pointer">
+                <a
+                  target="_blank"
+                  href="https://www.shawnrae.com/page66.shtml"
+                  class="text-[#f6914d] border-b hover:border-[#fff] border-[#e70000]"
+                >
+                  Shawn Rae Music Videos
+                </a>
+              </li>
+              <li class="font-pop text-[#b8e0f5] text-sm cursor-pointer">
+                <a
+                  target="_blank"
+                  href="https://www.shawnrae.com/page67.shtml"
+                  class="text-[#9ef2cc] border-b hover:border-[#fff] border-[#e70000]"
+                >
+                  Shawn Rae National & Internation
+                </a>
+              </li>
+              <li class="font-pop text-sm cursor-pointer">
+                <a
+                  target="_blank"
+                  href="https://www.shawnrae.com/page68.shtml"
+                  class="border-b hover:border-[#fff] text-[#e70000] hover:text-white border-[#e70000]"
+                >
+                  More Video Clips
+                </a>
+              </li>
+            </ol>
           </div>
         </div>
       </div>
@@ -285,7 +332,7 @@
         <span class="text-[32px]"> A</span>D
 
         <!-- </p> -->
-        <div class="grid grid-cols-1  md:grid-cols-2 gap-x-4">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-x-4">
           <img
             src="/assets/upper-left1.jpg"
             class="h-96 w-full rounded-xl border mt-4 md:mt-10"

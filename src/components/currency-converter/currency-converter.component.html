@@ -1,0 +1,65 @@
+<div class="text-white">
+  <h1
+    class="bg-[#ffd700] font-serif texxt-center flex gap-4 justify-center py-2 text-2xl"
+  >
+    Currency Converter
+  </h1>
+  <div class="flex flex-col md:flex-row justify-center gap-4 py-3">
+    <div class="flex flex-col">
+      <label for="fromCurrency">From:</label>
+      <select
+        class="border-2 rounded-lg px-2 py-2.5"
+        [(ngModel)]="fromCurrency"
+        id="fromCurrency"
+      >
+        <option *ngFor="let currency of currencyList" [value]="currency.code">
+          {{ currency.code }} - {{ currency.name }}
+        </option>
+      </select>
+    </div>
+
+    <div class="flex flex-col">
+      <label for="toCurrency">To:</label>
+      <select
+        class="border-2 rounded-lg px-2 py-2.5"
+        [(ngModel)]="toCurrency"
+        id="toCurrency"
+      >
+        <option *ngFor="let currency of currencyList" [value]="currency.code">
+          {{ currency.code }} - {{ currency.name }}
+        </option>
+      </select>
+    </div>
+
+    <div class="flex flex-col">
+      <label for="amount">Amount:</label>
+      <input
+        class="border-2 rounded-lg px-2 py-2.5"
+        type="number"
+        [(ngModel)]="amount"
+        id="amount"
+      />
+    </div>
+  </div>
+
+  <div class="flex justify-center items-center justify-items-center mx-auto">
+    <div *ngIf="error" class="error">{{ error }}</div>
+    <!-- <div *ngIf="conversionRate">{{ conversionRate }}</div> -->
+    <div *ngIf="result">{{ result }}</div>
+  </div>
+
+  <button
+    class="flex justify-center items-center justify-items-center mx-auto p-2 border bg-blue-400 rounded-md my-2"
+    (click)="swapCurrencies()"
+  >
+    Swap
+  </button>
+
+  <button
+    class="flex justify-center items-center justify-items-center px-6 rounded-lg py-1.5 bg-slate-500 mx-auto"
+    (click)="convert()"
+    [disabled]="isLoading"
+  >
+    {{ isLoading ? "Processing..." : "Convert" }}
+  </button>
+</div>
