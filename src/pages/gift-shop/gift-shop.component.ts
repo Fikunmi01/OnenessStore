@@ -6,6 +6,8 @@ import { CDComponent } from '../../components/cd/cd.component';
 import { CommonModule } from '@angular/common';
 import { CurrencyConverterComponent } from '../../components/currency-converter/currency-converter.component';
 import { CurrencyService } from '../../app/services/currency-service.service';
+// import { CurrencyService } from '../../services/currency-service.service';
+import { CartService } from '../../services/cart.service';
 
 interface JewelryItem {
   id: number;
@@ -60,7 +62,7 @@ export class GiftShopComponent implements OnInit {
   ];
   baseCurrency: string = 'USD';
 
-  constructor(private currencyService: CurrencyService) {}
+  constructor(private currencyService: CurrencyService, private cartService: CartService) {}
 
   ngOnInit(): void {
     // Initialize any required data here
@@ -70,49 +72,48 @@ export class GiftShopComponent implements OnInit {
     this.selectedTab = tab;
   }
 
-  addToCart() {
-    window.location.href =
-      'https://www.paypal.com/cgi-bin/webscr?cmd=_cart&business=paypal@shawnrae.com&display=1';
+  addToCart(item: any) {
+    this.cartService.addToCart(item);
   }
 
   cds: CD[] = [
     {
-      id: 1,
+      id: 4,
       title: 'Bambi With Love',
       artist: 'Shawn Rae',
       price: 18.98,
       image: '/assets/albumImg2.jpg',
     },
     {
-      id: 2,
+      id: 5,
       title: 'Tribute Album',
       artist: 'Shawn Rae',
       price: 18.98,
       image: '/assets/albumImg1.jpg',
     },
     {
-      id: 3,
+      id: 6,
       title: 'Oneness',
       artist: 'Shawn Rae',
       price: 13.98,
       image: '/assets/bambiAlbum.jpg',
     },
     {
-      id: 3,
+      id: 7,
       title: 'The Star - Spangled Banner',
       artist: 'Shawn Rae',
       price: 8.98,
       image: '/assets/albumImg3.jpg',
     },
     {
-      id: 3,
+      id: 8,
       title: 'A World Christmas, Love Knows No Borders',
       artist: 'Shawn Rae',
       price: 19.98,
       image: '/assets/cdGrid2.jpg',
     },
     {
-      id: 3,
+      id: 9,
       title: 'A World of Romance, A Time To Fall In Love',
       artist: 'Shawn Rae',
       price: 19.98,

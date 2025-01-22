@@ -1,5 +1,7 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { CartService } from '../../services/cart.service';
+
 interface CD {
   id: number;
   title: string;
@@ -13,7 +15,7 @@ interface CD {
   standalone: true,
   imports: [CommonModule],
   templateUrl: './cd.component.html',
-  styleUrl: './cd.component.scss',
+  styleUrls: ['./cd.component.scss'],
 })
 export class CDComponent {
   cds: CD[] = [
@@ -39,4 +41,10 @@ export class CDComponent {
       image: '/api/placeholder/400/300',
     },
   ];
+
+  cartService = inject(CartService);
+
+  addToCart(cd: CD) {
+    this.cartService.addToCart(cd);
+  }
 }

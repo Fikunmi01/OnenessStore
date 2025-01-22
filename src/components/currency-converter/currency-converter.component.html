@@ -1,30 +1,34 @@
-<div class="text-white">
+<div class="text-[#000]">
   <h1
     class="bg-[#ffd700] font-serif texxt-center flex gap-4 justify-center py-2 text-2xl"
   >
     Currency Converter
   </h1>
-  <div class="flex flex-col md:flex-row justify-center gap-4 py-3">
+  <div class="flex flex-col md:flex-row text-[#000] justify-center gap-4 py-3">
     <div class="flex flex-col">
       <label for="fromCurrency">From:</label>
       <select
+        placeholder="Select Currency"
         class="border-2 rounded-lg px-2 py-2.5"
         [(ngModel)]="fromCurrency"
         id="fromCurrency"
       >
+        <option value="" disabled selected>Select Currency</option>
         <option *ngFor="let currency of currencyList" [value]="currency.code">
           {{ currency.code }} - {{ currency.name }}
         </option>
       </select>
     </div>
 
-    <div class="flex flex-col">
+    <div class="flex flex-col text-[#000]">
       <label for="toCurrency">To:</label>
       <select
         class="border-2 rounded-lg px-2 py-2.5"
         [(ngModel)]="toCurrency"
         id="toCurrency"
+        placeholder="Select Currency"
       >
+        <option value="" disabled selected class="textx-[#000]">Select Currency</option>
         <option *ngFor="let currency of currencyList" [value]="currency.code">
           {{ currency.code }} - {{ currency.name }}
         </option>

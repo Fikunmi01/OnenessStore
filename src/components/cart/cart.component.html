@@ -1,0 +1,57 @@
+<div>
+  <app-navbar />
+</div>
+
+<div class="px-10 bg-black text-white">
+  <p class="font-serif text-base py-4">
+    <span class="text-[#fff]"> HOME </span>/ SHOPPING CART
+  </p>
+</div>
+
+<div class="p-6 flex flex-col gap-4 bg-[#000] text-white">
+  <table class="w-full">
+    <thead>
+      <tr class="text-left font-arim text-xl font-bold border-b">
+        <th class="md:w-1/5"></th>
+        <th class="md:w-1/5">Product</th>
+        <th class="md:w-1/5">Price</th>
+        <th class="md:w-1/5">Quantity</th>
+        <th class="md:w-1/5">Total</th>
+      </tr>
+    </thead>
+    <tbody class="font-bal text-base text-[#fff]">
+      <tr *ngFor="let item of cartService.getCart()" class="border-b">
+        <td class="py-4 flex mr-3 md:gap-10 w-fit md:w-1/5 text-[#fff]">
+          <button>
+            <img
+              src="assets/icons/close-icon.png"
+              class="cursor-pointer text-white"
+              (click)="cartService.removeFromCart(item.id)"
+              alt=""
+            />
+          </button>
+          <img
+            [src]="item.image"
+            alt="{{ item.title }}"
+            class="w-16 h-16 object-cover"
+          />
+        </td>
+        <td class="py-4 md:w-1/5">{{ item.title }}</td>
+        <td class="py-4 md:w-1/5">${{ item.price }}</td>
+        <td class="py-4 left-4 md:w-1/5 relative">
+          <span class="flex gap-x-2">
+            <button (click)="cartService.decrementQuantity(item.id)">-</button>
+            <span class="px-2 bg-[#fff] text-[#000]">{{ item.quantity }}</span>
+            <button (click)="cartService.incrementQuantity(item.id)">+</button>
+          </span>
+        </td>
+        <td class="py-4 md:w-1/5">${{ item.price * item.quantity }}</td>
+      </tr>
+    </tbody>
+  </table>
+  <app-order-summary></app-order-summary>
+</div>
+
+<div>
+  <app-footer />
+</div>

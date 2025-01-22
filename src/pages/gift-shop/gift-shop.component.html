@@ -175,6 +175,21 @@
             <span class="text-3xl">S</span>HIPPING
           </p>
 
+          <div class="flex justify-center gap-4 mt-4">
+            <button
+              (click)="addToCart({ id: 2, title: 'Oneness Male Perfume', price: 125.00, image: '/assets/onenessPerf1.jpg' })"
+              class="bg-[#cfb53b] text-white rounded-full px-4 py-2"
+            >
+              Add Male Perfume to Cart
+            </button>
+            <button
+              (click)="addToCart({ id: 3, title: 'Oneness Female Perfume', price: 250.00, image: '/assets/onenessPerf1.jpg' })"
+              class="bg-[#cfb53b] text-white rounded-full px-4 py-2"
+            >
+              Add Female Perfume to Cart
+            </button>
+          </div>
+
           <div class="flex md:flex-row flex-col justify-between my-4">
             <iframe
               class="w-96"
@@ -213,12 +228,12 @@
             <span class="text-3xl">S</span>HIPPING
           </p>
 
-          <button
-            (click)="addToCart()"
+          <!-- <button
+            (click)="addToCart({ id: 1, name: 'Oneness Sport', price: 89.00, image: '/assets/onenessPerf1.jpg' })"
             class="mt-4 bg-[#cfb53b] text-white rounded-full px-4 py-2 mx-auto"
           >
-            Add to Cart
-          </button>
+            Add to Cartss
+          </button> -->
 
           <a
             href=""
@@ -226,47 +241,11 @@
             >Google+</a
           >
         </div>
-        <!-- <div class="flex justify-between my-5 ">
-          <div
-            class="text-white w-96 px-3 py-2 border border-[#810100] bg-[#3d0101] border-dotted mx-auto flex gap-y-4 flex-col"
-          >
-            <img
-              src="/assets/jewelryImg1.jpg"
-              class="border border-[#810100] border-dotted"
-              alt=""
-            />
-            <p class="text-pop text-center text-sm">
-              The Oneness Jewelry Collection designs are made up of unique and
-              elegant fine jewelry pieces, from the most simple and stately to
-              the more extravagant. These artistic representations, each making
-              their own timeless statement, are manufactured by the finest
-              craftsmen in the world.
-            </p>
-          </div>
-
-          <div class=" px-3 py-2 border border-[#810100] bg-[#3d0101] border-dotted">
-            <img src="/assets/jewelryCollection.jpg" alt="" />
-          </div>
-        </div> -->
-
-        <!-- <div
-          *ngFor="let item of jewelryItems"
-          class="bg-white rounded-lg shadow overflow-hidden"
-        >
-          <img
-            [src]="item.image"
-            [alt]="item.name"
-            class="w-full h-48 object-fit"
-          />
-          <div class="p-4">
-            <h3 class="font-medium text-gray-800">{{ item.name }}</h3>
-            <p class="text-blue-600 font-bold mt-2">${{ item.price }}</p>
-          </div>
-        </div> -->
+       
       </div>
     </div>
-    <div *ngIf="selectedTab === 'cd'" class="pt-5">
-      <h1 class="text-white text-2xl">PERFUME</h1>
+    <div *ngIf="selectedTab === 'cd'" class="py-5">
+      <h1 class="text-white text-2xl">CDs</h1>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
         <div
@@ -282,6 +261,9 @@
             <h3 class="font-medium text-gray-800">{{ cd.title }}</h3>
             <p class="text-gray-600 text-sm">{{ cd.artist }}</p>
             <p class="text-blue-600 font-bold mt-2">${{ cd.price }}</p>
+            <button (click)="addToCart(cd)" class="mt-2 bg-[#cfb53b] text-white rounded-full px-4 py-2">
+              Add to Cart
+            </button>
           </div>
         </div>
       </div>

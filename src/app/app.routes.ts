@@ -6,6 +6,7 @@ import { PhotosComponent } from '../pages/photos/photos.component';
 import { MusicComponent } from '../pages/music/music.component';
 import { GiftShopComponent } from '../pages/gift-shop/gift-shop.component';
 import { ContactComponent } from '../contact/contact.component';
+import { CartComponent } from '../components/cart/cart.component';
 
 export const routes: Routes = [
   {
@@ -28,5 +29,9 @@ export const routes: Routes = [
   {
     path: 'contact',
     component: ContactComponent,
+  },
+  {
+    path: 'cart',
+    component: CartComponent,
   },
 ];

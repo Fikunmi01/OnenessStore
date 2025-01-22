@@ -1,11 +1,13 @@
 <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-    <div *ngFor="let cd of cds" 
-         class="bg-white rounded-lg shadow overflow-hidden">
-      <img [src]="cd.image" [alt]="cd.title" class="w-full h-48 object-cover"/>
-      <div class="p-4">
-        <h3 class="font-medium text-gray-800">{{cd.title}}</h3>
-        <p class="text-gray-600 text-sm">{{cd.artist}}</p>
-        <p class="text-blue-600 font-bold mt-2">${{cd.price}}</p>
-      </div>
+  <div *ngFor="let cd of cds" class="bg-white rounded-lg shadow overflow-hidden mb-10">
+    <img [src]="cd.image" [alt]="cd.title" class="w-full h-48 object-cover" />
+    <div class="p-4">
+      <h3 class="font-medium text-gray-800">{{ cd.title }}</h3>
+      <p class="text-gray-600 text-sm">{{ cd.artist }}</p>
+      <p class="text-blue-600 font-bold mt-2">${{ cd.price }}</p>
+      <button (click)="addToCart(cd)" class="mt-2 bg-[#cfb53b] text-white rounded-full px-4 py-2">
+        Add to Cart
+      </button>
     </div>
   </div>
+</div>

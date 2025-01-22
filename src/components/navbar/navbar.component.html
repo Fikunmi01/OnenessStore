@@ -34,7 +34,7 @@
   </span>
 
   <span class="flex justify-center p-2 md:py-1">
-    <img src="/assets/logo.jpg" alt="" />
+    <img routerLink="" src="/assets/logo.jpg" alt="" />
   </span>
 
   <span class="flex justify-between border-[#810100] border">
@@ -89,15 +89,13 @@
         <li class="border-b py-2 cursor-pointer" routerLink="/gift-shop">
           GIFT SHOP
         </li>
-        <li class="border-b py-2 cursor-pointer" routerLink="/contact">
+        <li class="border-b py-2 cursor-pointer" routerLink="/cart">
           CONTACT
         </li>
-        <li class="py-2 cursor-pointer">
-          <a
-            href="https://www.paypal.com/cgi-bin/webscr?cmd=_cart&business=paypal@shawnrae.com&display=1"
-          >
-            VIEW CART
-          </a>
+        <!-- href="https://www.paypal.com/cgi-bin/webscr?cmd=_cart&business=paypal@shawnrae.com&display=1" -->
+
+        <li routerLink="/cart" class="py-2 cursor-pointer">
+          <a> VIEW CART </a>
         </li>
       </ul>
     </div>
@@ -158,12 +156,13 @@
       <li
         class="hover:text-white cursor-pointer"
         [ngClass]="{ 'active-link': isActive('/view-cart') }"
+        routerLink="/cart"
       >
-        <a
+        <!-- <a
           href="https://www.paypal.com/cgi-bin/webscr?cmd=_cart&business=paypal@shawnrae.com&display=1"
-        >
+        > -->
           VIEW CART
-        </a>
+        <!-- </a> -->
       </li>
     </ul>
   </span>
