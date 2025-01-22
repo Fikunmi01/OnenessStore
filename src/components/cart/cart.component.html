@@ -8,8 +8,8 @@
   </p>
 </div>
 
-<div class="p-6 flex flex-col gap-4 bg-[#000] text-white">
-  <table class="w-full">
+<div [ngClass]="{'h-96': cartService.getCart().length === 0, 'h-auto': cartService.getCart().length > 0}" class="p-6 flex flex-col gap-2 md:gap-4 bg-[#000] text-white">
+  <table class="w-full" *ngIf="cartService.getCart().length > 0; else emptyCart">
     <thead>
       <tr class="text-left font-arim text-xl font-bold border-b">
         <th class="md:w-1/5"></th>
@@ -23,17 +23,24 @@
       <tr *ngFor="let item of cartService.getCart()" class="border-b">
         <td class="py-4 flex mr-3 md:gap-10 w-fit md:w-1/5 text-[#fff]">
           <button>
-            <img
-              src="assets/icons/close-icon.png"
-              class="cursor-pointer text-white"
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              xml:space="preserve"
+              viewBox="0 0 50 50"
+              id="close"
               (click)="cartService.removeFromCart(item.id)"
-              alt=""
-            />
+              class="text-white w-3 h-3 md:w-6 md:mr-6"
+            >
+              <path
+                d="M9.016 40.837a1.001 1.001 0 0 0 1.415-.001l14.292-14.309 14.292 14.309a1 1 0 1 0 1.416-1.413L26.153 25.129 40.43 10.836a1 1 0 1 0-1.415-1.413L24.722 23.732 10.43 9.423a1 1 0 1 0-1.415 1.413l14.276 14.293L9.015 39.423a1 1 0 0 0 .001 1.414z"
+                fill="currentColor"
+              ></path>
+            </svg>
           </button>
           <img
             [src]="item.image"
             alt="{{ item.title }}"
-            class="w-16 h-16 object-cover"
+            class="w-16 mr-6 h-16 object-cover"
           />
         </td>
         <td class="py-4 md:w-1/5">{{ item.title }}</td>
@@ -49,7 +56,10 @@
       </tr>
     </tbody>
   </table>
-  <app-order-summary></app-order-summary>
+  <ng-template #emptyCart>
+    <p class="text-center text-white">No items available in cart.</p>
+  </ng-template>
+  <app-order-summary *ngIf="cartService.getCart().length > 0"></app-order-summary>
 </div>
 
 <div>
