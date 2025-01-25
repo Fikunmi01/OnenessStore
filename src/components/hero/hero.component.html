@@ -173,19 +173,19 @@
     </p>
 
     <div
-      class="flex flex-col-reverse md:flex-row items-center relative gap-10 my-10"
+      class="flex gap-x-2 flex-row items-center relative  my-10"
     >
-      <span class="border-[#cc6633] border rounded-xl">
+      <span class="w-1/2 border-[#cc6633] border rounded-xl">
         <img
           src="/assets/lower-right3.jpg"
-          class="md:h-96 rounded-xl pt-8 mx-auto"
+          class="md:h-96 rounded-xl mx-auto"
           alt=""
         />
       </span>
 
       <span class="border-[#cc6633] border rounded-xl">
         <iframe
-          class="w-80 md:w-[560px] md:h-96 rounded-xl"
+          class="w-1/2 md:h-96 rounded-xl"
           src="https://www.youtube.com/embed/HXI5r-x7FL0?si=Mvc0c7s-7IsZ7OvE"
           title="YouTube video player"
           frameborder="0"
@@ -203,14 +203,14 @@
 
       <div>
         <div
-          class="flex md:flex-row flex-col-reverse justify-start my-4 mx-auto items-start"
+          class="flex md:flex-row flex-col justify-start my-4 mx-auto items-start"
         >
           <div
             class="flex overflow-x-scroll gap-x-4 border-r md:px-6 md:w-3/5 no-scrollbar"
             id="slideshow"
           >
             <div
-              class="flex-shrink-0 md:w-80 active-item"
+              class="flex-shrink-0 w-80 active-item"
               *ngFor="let item of slides"
             >
               <div
@@ -332,7 +332,7 @@
         <span class="text-[32px]"> A</span>D
 
         <!-- </p> -->
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-x-4">
+        <div class="grid grid-cols-2 gap-x-4">
           <img
             src="/assets/upper-left1.jpg"
             class="h-96 w-full rounded-xl border mt-4 md:mt-10"
