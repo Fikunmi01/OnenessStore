@@ -18,14 +18,14 @@ export class HeroComponent implements AfterViewInit {
       text: 'The World of Perfume & Fragrances by Shawn Rae',
       img: '/assets/upper-center3.jpg',
     },
-    {
-      text: 'Christmas & Roman CDs Available on Amazon & Itunes',
-      img: '/assets/upper-center1.jpg',
-    },
-    {
-      text: 'Christmas & Roman CDs Available on Amazon & Itunes',
-      img: '/assets/upper-center2.jpg',
-    },
+    // {
+    //   text: 'Christmas & Roman CDs Available on Amazon & Itunes',
+    //   img: '/assets/upper-center1.jpg',
+    // },
+    // {
+    //   text: 'Christmas & Roman CDs Available on Amazon & Itunes',
+    //   img: '/assets/upper-center2.jpg',
+    // },
   ];
 
   ngAfterViewInit() {

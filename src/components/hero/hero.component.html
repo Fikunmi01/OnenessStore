@@ -151,7 +151,7 @@
   </div>
 </div> -->
 
-<div class="bg-[#000000]">
+<!-- <div class="bg-[#000000]">
   <div class="md:p-10 p-4 text-center">
     <h1 class="text-[#ffd700] md:text-2xl font-serif">
       <p class="text-[32px]">
@@ -173,19 +173,19 @@
     </p>
 
     <div
-      class="flex gap-x-2 flex-row items-center relative  my-10"
+      class="flex flex-col-reverse md:flex-row items-center relative gap-10 my-10"
     >
-      <span class="w-1/2 border-[#cc6633] border rounded-xl">
+      <span class="border-[#cc6633] border rounded-xl">
         <img
           src="/assets/lower-right3.jpg"
-          class="md:h-96 rounded-xl mx-auto"
+          class="md:h-96 rounded-xl pt-8 mx-auto"
           alt=""
         />
       </span>
 
       <span class="border-[#cc6633] border rounded-xl">
         <iframe
-          class="w-1/2 md:h-96 rounded-xl"
+          class="w-80 md:w-[560px] md:h-96 rounded-xl"
           src="https://www.youtube.com/embed/HXI5r-x7FL0?si=Mvc0c7s-7IsZ7OvE"
           title="YouTube video player"
           frameborder="0"
@@ -203,14 +203,14 @@
 
       <div>
         <div
-          class="flex md:flex-row flex-col justify-start my-4 mx-auto items-start"
+          class="flex md:flex-row flex-col-reverse justify-start my-4 mx-auto items-start"
         >
           <div
             class="flex overflow-x-scroll gap-x-4 border-r md:px-6 md:w-3/5 no-scrollbar"
             id="slideshow"
           >
             <div
-              class="flex-shrink-0 w-80 active-item"
+              class="flex-shrink-0 md:w-80 active-item"
               *ngFor="let item of slides"
             >
               <div
@@ -228,20 +228,7 @@
             </div>
       
           </div>
-          <!-- <div class="flex justify-center mt-4">
-            <button
-              id="prevSlide"
-              class="mx-2 px-4 py-2 bg-blue-500 text-white rounded"
-            >
-              Previous
-            </button>
-            <button
-              id="nextSlide"
-              class="mx-2 px-4 py-2 bg-blue-500 text-white rounded"
-            >
-              Next
-            </button>
-          </div> -->
+       
 
           <div
             class="text-white flex mb-4 md:mb-0 md:px-10 flex-col items-start"
@@ -325,14 +312,14 @@
 
       <div class="text-[#ffd700] md:m-10">
         <span class="text-[32px]"> X</span>MAS
-        <!-- <p> -->
-        <span class="text-[32px]"> N</span>EW
+        <p> -->
+<!-- <span class="text-[32px]"> N</span>EW
         <span class="text-[32px]"> Y</span>EAR
         <span class="text-[32px]"> T</span>IMES
         <span class="text-[32px]"> A</span>D
 
-        <!-- </p> -->
-        <div class="grid grid-cols-2 gap-x-4">
+        </p> -->
+<!-- <div class="grid grid-cols-1 md:grid-cols-2 gap-x-4">
           <img
             src="/assets/upper-left1.jpg"
             class="h-96 w-full rounded-xl border mt-4 md:mt-10"
@@ -416,5 +403,226 @@
 
   <div>
     <app-footer />
+  </div>
+</div>  -->
+
+<div class=" grid gap-x-3 md:gap-x-10 md:px-10 px-4 grid-cols-3 my-10 justify-items-center">
+  <div>
+    <h1 class="text-[#ffd700] text-center md:text-2xl font-serif">
+      <p class="md:text-[32px]">
+        <span class="md:text-5xl">S</span>HAWN <span class="md:text-5xl">R</span>AE:
+      </p>
+      <span class="md:text-[32px]"> G</span>LOBAL
+      <span class="md:text-[32px]">"G</span>OODWILL
+      <span class="md:text-[32px]">A</span>MBASSADOR "
+    </h1>
+    <p class="font-serif text-center text-[#ffd700] md:text-lg">
+      For the <span class="md:text-2xl">WORLD ENERGY FORUM </span>at the Annual
+      <span class="md:text-2xl">UNITED NATIONS</span>
+    </p>
+
+    <p
+      class="font-serif text-center text-[#ffd700] shadow-xl shadow-[#1018280D] border-b-2 border-b-[#cc6633] w-fit rounded-md mx-auto md:rounded-full py-2 md:text-lg"
+    >
+      World Energy Day Conference at UN Headquarters, New York
+    </p>
+
+    <span class="">
+      <img src="/assets/lower-right3.jpg" class="py-8 mx-auto" alt="" />
+    </span>
+
+    <div
+      class="flex-shrink-0 gap-y-4 mb-4 md:mb-10 active-item"
+      *ngFor="let item of slides"
+    >
+      <div
+        class="flex font-serif text-sm md:text-base justify-center items-center flex-col-reverse text-white"
+      >
+        <p class="md:px-4">
+          {{ item.text }}
+        </p>
+        <img src="{{ item.img }}" alt="" />
+      </div>
+    </div>
+
+    <div class="text-white flex flex-col items-start">
+      <h3 class="text-[#ffd700] font-sans md:text-[32px]">
+        Shawn Rae Video Clips
+      </h3>
+      <ol class="list-decimal flex flex-col items-start px-1 text-[#b8e0f5]">
+        <li class="font-pop text-base text-[#b8e0f5] cursor-pointer">
+          <a
+            class="border-b hover:border-[#fff] border-[#e70000]"
+            target="_blank"
+            href="https://www.shawnrae.com/news.shtml"
+          >
+            Latest News & Events Page
+          </a>
+        </li>
+        <li
+          class="font-pop text-sm cursor-pointer border-[#e70000] hover:border-white"
+        >
+          <a
+            class="border-b hover:border-[#fff] text-[#e70000] hover:text-white border-[#e70000]"
+            target="_blank"
+            href="https://www.shawnrae.com/page82.shtml"
+          >
+            Shawn Rae Video Biography
+          </a>
+        </li>
+        <li class="font-pop text-sm text-[#b8e0f5] cursor-pointer">
+          <a
+            target="_blank"
+            href="https://www.shawnrae.com/news.shtml"
+            class="border-b hover:border-[#fff] text-[#40ef61] border-[#e70000]"
+          >
+            Photos From Arianna Huffington to Fareed Zakaria
+          </a>
+        </li>
+
+        <li class="font-pop text-[#b8e0f5] text-sm cursor-pointer">
+          <a
+            target="_blank"
+            href="https://www.shawnrae.com/page78.shtml"
+            class="border-b hover:border-[#fff] text-[#e70000] border-[#e70000]"
+          >
+            Shawn Rae Christmas Album Videos
+          </a>
+        </li>
+        <li class="font-pop text-sm cursor-pointer">
+          <a
+            target="_blank"
+            href="https://www.shawnrae.com/page66.shtml"
+            class="text-[#f6914d] border-b hover:border-[#fff] border-[#e70000]"
+          >
+            Shawn Rae Music Videos
+          </a>
+        </li>
+        <li class="font-pop text-[#b8e0f5] text-sm cursor-pointer">
+          <a
+            target="_blank"
+            href="https://www.shawnrae.com/page67.shtml"
+            class="text-[#9ef2cc] border-b hover:border-[#fff] border-[#e70000]"
+          >
+            Shawn Rae National & Internation
+          </a>
+        </li>
+        <li class="font-pop text-sm cursor-pointer">
+          <a
+            target="_blank"
+            href="https://www.shawnrae.com/page68.shtml"
+            class="border-b hover:border-[#fff] text-[#e70000] hover:text-white border-[#e70000]"
+          >
+            More Video Clips
+          </a>
+        </li>
+      </ol>
+    </div>
+  </div>
+
+  <!-- grid 2 -->
+  <div>
+    <span class="">
+      <iframe
+        class="w-full"
+        src="https://www.youtube.com/embed/HXI5r-x7FL0?si=Mvc0c7s-7IsZ7OvE"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen
+      ></iframe>
+    </span>
+
+    <div class="text-[#ffd700] text-center my-2 md:my-4">
+      <span class="md:text-[32px]"> X</span>MAS
+      <p>
+        <span class="md:text-[32px]"> N</span>EW
+        <span class="md:text-[32px]"> Y</span>EAR
+        <span class="md:text-[32px]"> T</span>IMES
+        <span class="md:text-[32px]"> A</span>D
+      </p>
+    </div>
+
+    <div class="">
+      <img
+        src="/assets/upper-center2.jpg"
+        class="w-full rounded-xl border"
+        alt=""
+      />
+      <img
+        src="/assets/upper-left1.jpg"
+        class="w-full rounded-xl border mt-4 md:mt-10"
+        alt=""
+      />
+    </div>
+    <!-- </div> -->
+  </div>
+  <!-- grid 3 -->
+  <div class="text-white flex items-center flex-col text-center">
+    <!-- <div class="flex text-white flex-col gap-y-2 items-center"> -->
+    <h2 class="font-sans md:text-2xl text-[#ffd700]">
+      Christmas & Romance CDs Available on Amazon & Itunes
+    </h2>
+
+    <a href="" class="text-[#e70000] md:text-xl">Links to Amazon & Tunecore</a>
+
+    <img
+      src="/assets/upper-center1.jpg"
+      class="border-4 border-[#e70000] font-serif"
+      alt=""
+    />
+
+    <p class="my-2 font-pop md:text-xl">
+      <span class="text-[#e70000]">*</span> Featuring a Duet with DEANNA MARTIN,
+      World Renowned Singer/Actress, daughter of American Music Icon and Legend,
+      DEAN MARTIN
+    </p>
+
+    <h3 class="md:text-2xl font-serif text-[#ffd700]">
+      AWAKEN TO THE SPIRIT OF ONENESS
+    </h3>
+
+    <p class="font-sans text-sm">
+      As a unique and multifaceted international personality,
+      <span class="text-[#ffd700]">Shawn Rae</span> is best known for his
+      various contributions as a speaker, designer, recording artist, and
+      humanitarian. <span class="text-[#ffd700]">Shawn</span> has, during the
+      course of his global work, consulted, interviewed, worked or met with a
+      host of distinguished personalities from A to Z from Wally Amos (Famous
+      Amos) to Arianna Huffington to Fareed Zakaria, and many others in between.
+      He has represented the United States at various national and international
+      events and forums, and has also been featured in the media speaking on
+      topics such as corporate giving, human rights abuses, matters relating to
+      world trade, technology, and energy-related issues affecting mankind.
+      <span class="text-[#ffd700]"> Shawn </span> was selected as one of the Top
+      Ten Speakers in the United States for the Conference on American Ingenuity
+      by the U.S. Department of Commerce and picked as one of four Judges by the
+      U.S. Patent & Trademark Office and the Intellectual Property Association
+      (IPO). The IPO includes such prestigious members as, General Motors,
+      Lockheed, 3M, General Electric, Microsoft, Xerox, Aramco, Rolls-Royce, and
+      other major corporate and multinational leaders.
+      <span class="text-[#ffd700]">Shawn</span> is the global
+      <span class="text-[#ffd700]">Goodwill Ambassador</span> for the World
+      Energy Forum, headquartered at the United Nations Plaza. The World Energy
+      Forum partners with world governments, energy-related organizations, and
+      the private sector. Its annual
+      <span class="text-[#ffd700]">World Energy Forum Conference</span> at the
+      United Nations, along with many other events all over the world, helps to
+      lead a global conversation on energy issues, and to educate and campaign
+      for accessible and sustainable energy that can benefit the economic and
+      social development of all nations and peoples across the globe. Shawn's
+      motto is
+      <span class="text-[#e70000]"> "Challenge yourself" </span> According to
+      Shawn,
+      <span class="text-[#e70000]">
+        "A unified humanity can collectively resolve problems. Divided, we only
+        serve to create them."</span
+      >
+    </p>
+    <a href="/biography" class="text-[#e70000] border-b border-b-[#e70000]">
+      More>>
+    </a>
+    <!-- </div> -->
   </div>
 </div>
