@@ -26,19 +26,19 @@ html, body {
 
 * {
   box-sizing: border-box;
-  background-color: #000;
+  // background-color: #000;
 }
 
 
 
 .zoom {
-  zoom: 0.4;
+  zoom: 0.5;
   -moz-transform: scale(2);
   -moz-transform-origin: 0 0;
 }
 
 .zoom1 {
-  zoom: 1;
+  zoom: 1.1;
   -moz-transform: scale(2);
   -moz-transform-origin: 0 0;
 }
