@@ -11,7 +11,9 @@ import { Router, RouterLink } from '@angular/router';
   styleUrl: './navbar2.component.scss',
 })
 export class Navbar2Component {
-  constructor(private router: Router) {}
+  constructor(private router: Router) {
+    this.detectMobileAndZoomOut();
+  }
 
   isActive(route: string): boolean {
     return this.router.url === route;
@@ -20,5 +22,13 @@ export class Navbar2Component {
   navMenu: boolean = false;
   mobileNav() {
     this.navMenu = !this.navMenu;
+  }
+
+  detectMobileAndZoomOut() {
+    if (window.innerWidth <= 768) {
+      document.body.style.transform = 'scale(0.8)';
+      document.body.style.transformOrigin = '0 0';
+      document.body.style.width = '125%';
+    }
   }
 }
