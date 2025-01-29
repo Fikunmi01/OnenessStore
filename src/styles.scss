@@ -28,6 +28,14 @@ html, body {
   box-sizing: border-box;
 }
 
+
+
+.zoom {
+  zoom: 0.5;
+  -moz-transform: scale(2);
+  -moz-transform-origin: 0 0;
+}
+
 // @media screen and (max-width: 767px) {
 //   * {
 //     overflow-x: hidden;
