@@ -1,12 +1,14 @@
 import { Component } from '@angular/core';
 import { NavbarComponent } from '../../components/navbar/navbar.component';
 import { FooterComponent } from '../../components/footer/footer.component';
-import { CommonModule } from '@angular/common';
+import { CommonModule, NgClass } from '@angular/common';
+import { Router, RouterLink } from '@angular/router';
+import { Navbar2Component } from '../../components/navbar2/navbar2.component';
 
 @Component({
   selector: 'app-biography',
   standalone: true,
-  imports: [NavbarComponent, FooterComponent, CommonModule],
+  imports: [NavbarComponent, Navbar2Component,FooterComponent, NgClass,RouterLink,CommonModule],
   templateUrl: './biography.component.html',
   styleUrls: ['./biography.component.scss'],
 })
@@ -19,6 +21,12 @@ export class BiographyComponent {
     } else {
       this.activeTab = tab;
     }
+  }
+
+  constructor(private router: Router) {}
+
+  isActive(route: string): boolean {
+    return this.router.url === route;
   }
 
   earlyLife: boolean = true;

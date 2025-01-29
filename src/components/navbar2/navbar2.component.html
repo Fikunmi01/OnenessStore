@@ -1,0 +1,117 @@
+<div class="bg-[#3d0101] overflow-y-hidden">
+    <!-- <style>
+      .active-link {
+        color: white;
+      }
+    </style> -->
+    <span
+      class="flex justify-around font-sans text-[#fff8d3] border-[#810100] border  border-dotted"
+    >
+      <!-- <div></div> -->
+      <ul class="inline-flex gap-x-4 px-1.5 text-sm py-1">
+        <li
+          class="hover:text-white cursor-pointer border-[#fff8d3] hover:border-[#fff] border-b w-fit"
+        >
+          <a target="'_blank" href="https://www.shawnrae.com/page4.shtml">
+            Friends Club
+          </a>
+        </li>
+        <li
+          class="hover:text-white border-[#fff8d3] cursor-pointer hover:border-[#fff] border-b w-fit"
+        >
+          <a target="'_blank" href="https://www.shawnrae.com/news.shtml">
+            News & Events
+          </a>
+        </li>
+        <li
+          class="hover:text-white border-[#fff8d3] hover:border-[#fff] cursor-pointer border-b w-fit"
+        >
+          <a target="_blank" href="https://www.shawnrae.com/page8.shtml">
+            Media Kit
+          </a>
+        </li>
+      </ul>
+    </span>
+  
+    <span class="flex justify-center p-2 md:py-1">
+      <img routerLink="" src="/assets/logo (2).jpg" alt="" />
+    </span>
+  
+    <span class="flex justify-between border-[#810100] border">
+      <span></span>
+  
+  
+      <ul
+        class=" visible inline-flex text-[#e70000] gap-x-4 px-1.5 text-sm py-1 text-[12.8px] font-bold"
+      >
+        <li
+          class="cursor-pointer w-fit"
+          routerLink="/"
+          [ngClass]="{ 'active-link': isActive('/') }"
+        >
+          HOME
+        </li>
+        <li
+          class="hover:text-white cursor-pointer"
+          routerLink="/biography"
+          [ngClass]="{ 'active-link': isActive('/biography') }"
+        >
+          BIOGRAPHY
+        </li>
+        <li
+          class="hover:text-white cursor-pointer"
+          routerLink="/photos"
+          [ngClass]="{ 'active-link': isActive('/photos') }"
+        >
+          PHOTO
+        </li>
+        <li
+          class="hover:text-white cursor-pointer"
+          routerLink="/music"
+          [ngClass]="{ 'active-link': isActive('/music') }"
+        >
+          MUSIC
+        </li>
+        <li>
+          <a
+            href="https://onenesstemporarystore.myshopify.com/"
+            class="hover:text-white cursor-pointer"
+          >
+            PERFUMES
+          </a>
+        </li>
+        <li
+          class="hover:text-white cursor-pointer"
+          routerLink="/gift-shop"
+          [ngClass]="{ 'active-link': isActive('/gift-shop') }"
+        >
+          GIFT SHOP
+        </li>
+        <li
+          class="hover:text-white cursor-pointer"
+          routerLink="/contact"
+          [ngClass]="{ 'active-link': isActive('/contact') }"
+        >
+          CONTACT
+        </li>
+        <li
+        class="hover:text-white cursor-pointer"
+        routerLink="/contact"
+        [ngClass]="{ 'active-link': isActive('/contact') }"
+      >
+        BLOG
+      </li>
+        <li
+          class="hover:text-white cursor-pointer"
+          [ngClass]="{ 'active-link': isActive('/view-cart') }"
+          routerLink="/cart"
+        >
+          <!-- <a
+            href="https://www.paypal.com/cgi-bin/webscr?cmd=_cart&business=paypal@shawnrae.com&display=1"
+          > -->
+            VIEW CART
+          <!-- </a> -->
+        </li>
+      </ul>
+    </span>
+  </div>

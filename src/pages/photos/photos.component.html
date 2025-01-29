@@ -1,12 +1,12 @@
 <div>
-  <app-navbar />
+  <app-navbar2 />
 
   <div class="bg-[url('/assets/bg2.jpg')] text-white md:px-5 p-2 md:py-10">
     <h1 class="font-serif text-2xl">PHOTOS:</h1>
-    <p class="font-serif pt-2">
+    <p class="font-serif text-center pt-2">
       The final frontier may be human relationships, one person to another.
     </p>
-    <p class="mb-2">
+    <p class="mb-2 text-center">
       -Buzz Aldrin (<span class="text-[#e70000] italic"
         >Astronaut and 2nd human to walk on the Moon</span
       >)
@@ -16,18 +16,22 @@
       CLICK ON PHOTO IMAGES TO VIEW LARGER PICTURES AND DESCRIPTION
     </p>
 
-    <div class="my-2 grid grid-cols-1 md:grid-cols-3 gap-4">
+    <div class="my-2 grid grid-cols-1 md:grid-cols-4 gap-4">
       <div
-        class="px-4 pt-4 pb-4 bg-[#3d0101] text-[#cfb53b] border-[#810100] border border-dotted"
+        class="px-4 pt-4 pb-4  bg-[#3d0101] text-[#cfb53b] border-[#810100] border border-dotted"
         *ngFor="let item of visiblePhotosArray"
       >
         <span>
           <img
-            (click)="showDetails(item.id)"
-            src="{{ item.img }}"
-            class="w-96 h-96 cursor-pointer"
+          target="_blank"
+            (click)="navigateToPhoto(item.id)"
+            src="{{ item.thumbnail }}"
+            class="mx-auto cursor-pointer"
             alt=""
           />
+          <p class="font-serif ">
+            CLICK ON PHOTO IMAGES TO VIEW LARGER PICTURES AND DESCRIPTION
+          </p>
           <p>
             {{ item.description }}
           </p>

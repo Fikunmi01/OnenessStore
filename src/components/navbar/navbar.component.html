@@ -5,9 +5,9 @@
     }
   </style> -->
   <span
-    class="flex font-sans text-[#fff8d3] border-[#810100] border justify-between border-dotted"
+    class="flex justify-around font-sans text-[#fff8d3] border-[#810100] border  border-dotted"
   >
-    <div></div>
+    <!-- <div></div> -->
     <ul class="inline-flex gap-x-4 px-1.5 text-sm py-1">
       <li
         class="hover:text-white cursor-pointer border-[#fff8d3] hover:border-[#fff] border-b w-fit"
@@ -27,7 +27,7 @@
         class="hover:text-white border-[#fff8d3] hover:border-[#fff] cursor-pointer border-b w-fit"
       >
         <a target="_blank" href="https://www.shawnrae.com/page8.shtml">
-          Electronic Press Kit
+          Media Kit
         </a>
       </li>
     </ul>
@@ -94,6 +94,13 @@
       >
         CONTACT
       </li>
+      <li
+      class="hover:text-white cursor-pointer"
+      routerLink="/contact"
+      [ngClass]="{ 'active-link': isActive('/contact') }"
+    >
+      BLOG
+    </li>
       <li
         class="hover:text-white cursor-pointer"
         [ngClass]="{ 'active-link': isActive('/view-cart') }"
