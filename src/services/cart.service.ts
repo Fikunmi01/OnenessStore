@@ -7,7 +7,7 @@ import { Injectable } from '@angular/core';
 export class CartService {
   private cart: any[] = [];
 
-  // ...existing code...
+ 
 
   addToCart(item: any) {
     const existingItem = this.cart.find(cartItem => cartItem.id === item.id);

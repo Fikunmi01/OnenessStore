@@ -1,7 +1,9 @@
-<div class="overflow-y-hidden w-full">
+<div
+
+ class="overflow-y-hidden zoom1 h-fit photOver w-full md:w-full relative photOver">
   <app-navbar2 />
 
-  <div class="bg-[url('/assets/bg2.jpg')] text-white md:px-5 p-2 md:py-10">
+  <div class="bg-[url('/assets/bg2.jpg')] text-white h-fit md:px-5 p-2 md:py-10">
     <h1 class="font-serif text-2xl">PHOTOS:</h1>
     <p class="font-serif text-center pt-2">
       The final frontier may be human relationships, one person to another.
@@ -16,9 +18,9 @@
       CLICK ON PHOTO IMAGES TO VIEW LARGER PICTURES AND DESCRIPTION
     </p>
 
-    <div class="my-2 grid grid-cols-1 md:grid-cols-4 gap-4">
+    <div class="my-2 grid h-fit grid-cols-1 md:grid-cols-4 gap-4">
       <div
-        class="px-4 pt-4 pb-4  bg-[#3d0101] text-[#cfb53b] border-[#810100] border border-dotted"
+        class="px-4 pt-4 pb-4 h-fit  bg-[#3d0101] text-[#cfb53b] border-[#810100] border border-dotted"
         *ngFor="let item of visiblePhotosArray"
       >
         <span>
@@ -39,11 +41,11 @@
     </div>
 
     <div
-      class="fixed inset-0 flex items-center md:w-2/5 px-4 py-4 rounded-xl h-fit md:mx-auto mt-48 mx-2 md:mt-40 justify-center bg-white z-50"
+      class="fixed inset-0 flex  items-center md:w-2/5 px-4 py-4 rounded-xl h-fit md:mx-auto mt-48 mx-2 md:mt-40 justify-center bg-white z-50"
       *ngIf="details"
     >
       <div>
-        <div class="flex justify-between md:gap-x-16 md:items-start  w-full">
+        <div class="flex justify-between md:gap-x-16 md:items-start h-fit w-full">
           <h2 class="text-black text-lg leading-none mb-2 font-bold">
             {{ selectedItem?.description }}
           </h2>
@@ -53,7 +55,7 @@
             viewBox="0 0 50 50"
             id="close"
             (click)="detailsMenu()"
-            class="text-[#000] cursor-pointer w-7 h-6 md:w-4 md:mr-6"
+            class="text-[#000] cursor-pointer md:w-4 md:mr-6"
           >
             <path
               d="M9.016 40.837a1.001 1.001 0 0 0 1.415-.001l14.292-14.309 14.292 14.309a1 1 0 1 0 1.416-1.413L26.153 25.129 40.43 10.836a1 1 0 1 0-1.415-1.413L24.722 23.732 10.43 9.423a1 1 0 1 0-1.415 1.413l14.276 14.293L9.015 39.423a1 1 0 0 0 .001 1.414z"
